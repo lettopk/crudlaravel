@@ -13,10 +13,9 @@ use App\Http\Controllers\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('usuarios.listar');
-});
-
+//Listado de usuarios
+Route::get('/', [UserController::class, 'listar']);
+//formulario Usuarios
 Route::get('/form', [UserController::class, 'userform']);
+//Guardar Usuarios
 Route::post('/form/save', [UserController::class, 'save'])->name('save');

@@ -7,6 +7,12 @@ use App\Models\Usuario;
 
 class UserController extends Controller
 {
+    //Listado de usuarios
+    public function listar(){
+        $data['users']= Usuario::paginate(3);
+
+        return view ('usuarios.listar',$data);
+    }
     //Formulario Usuarios
     public function userform(){
         return view ('Usuarios.userform');
