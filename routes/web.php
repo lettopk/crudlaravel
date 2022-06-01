@@ -21,3 +21,7 @@ Route::get('/form', [UserController::class, 'userform']);
 Route::post('/form/save', [UserController::class, 'save'])->name('save');
 //Eliminar usuarios
 Route::delete('/delete/{id}', [UserController::class, 'delete'])->name('delete');
+//formulario para editar uduarios
+Route::get('/editform/{id}',[UserController::class, 'editform'])->name('editform');
+//Edicion de usuarios
+Route::patch('/edit/{id}',[UserController::class, 'edit'])->name ('edit');
