@@ -45,4 +45,5 @@
             </div>
         </div>
     </div>
+<a class="btn btn-light btn-xs mt-5" href="{{ url('/')}}">&laquo volver</a>
 </div>

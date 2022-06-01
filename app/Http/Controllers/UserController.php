@@ -31,4 +31,11 @@ class UserController extends Controller
 
         return back()->with('usuarioGuardado','Usuario Guardado');
     }
+    //Eliminar Usuarios
+    public function delete($id){
+        
+        Usuario::destroy ($id);
+
+        return back()->with('UsuarioEliminado','Usuario eliminado');
+    }
 }
